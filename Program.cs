@@ -8,6 +8,9 @@ builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
@@ -25,3 +28,4 @@ app.MapGet("/dado/d{numeroDefaces}", (
 
 
 app.Run();
+
